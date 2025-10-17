@@ -1,6 +1,6 @@
 .navbar-wrapper {
   position: fixed;
-  top: 50px; /* adjust distance from top */
+  top: 40px; /* distance from top */
   left: 50%;
   transform: translateX(-50%); /* center horizontally */
   width: 664px;

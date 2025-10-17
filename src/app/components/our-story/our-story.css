@@ -1,0 +1,74 @@
+
+.our-story-container {
+  width: 100%;
+  min-height: 100vh;
+  position: relative;
+  padding: 20px 50px 10px 50px; 
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  scroll-margin-top: 120px;
+  background: transparent; 
+  z-index: 1;
+}
+
+.story-main-title,
+.story-subtitles,
+.subtitle-left, .subtitle-center, .subtitle-right,
+.story-texts,
+.text-left, .text-center, .text-right,
+.story-icons,
+.icon-compass, .icon-rocket, .icon-timeline,
+.vector1, .vector2, .vector3 {
+  background: transparent !important;
+  color: #fff;
+  z-index: 2;
+}
+
+.our-story-container::after,
+.our-story-container::before,
+.vector1::before, .vector1::after,
+.vector2::before, .vector2::after,
+.vector3::before, .vector3::after,
+.icon-compass::before, .icon-compass::after,
+.icon-rocket::before, .icon-rocket::after,
+.icon-timeline::before, .icon-timeline::after {
+}
+.story-main-title {
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 700;
+  font-size: 60px; 
+  text-align: center;
+  margin-bottom: 50px;
+  white-space: pre-line; 
+}
+
+.story-subtitle-blocks {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  max-width: 1200px;
+  margin-top: 50px;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.story-subtitle-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  max-width: 350px;
+}
+
+.story-photo {
+  width: 120px;
+  height: 120px;
+  margin-bottom: 20px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 10px;
+}

@@ -62,7 +62,8 @@
               "buildTarget": "my-portfolio:build:production"
             },
             "development": {
-              "buildTarget": "my-portfolio:build:development"
+              "buildTarget": "my-portfolio:build:development",
+              "port": 4201
             }
           },
           "defaultConfiguration": "development"
