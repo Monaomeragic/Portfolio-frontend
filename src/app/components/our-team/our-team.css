@@ -28,7 +28,7 @@
 
 .loop-abstract-shape {
   position: absolute;
-  top: 20px;
+  top: 100px;
   left: -520px;
   width: 1140px;
   height: 1400px;
@@ -45,3 +45,4 @@
   filter: blur(3px);
   transform: rotate(180deg);
 }
+
