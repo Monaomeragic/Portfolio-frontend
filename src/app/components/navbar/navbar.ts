@@ -1,11 +1,10 @@
 import { Component } from '@angular/core';
-import { RouterLink, RouterLinkActive } from '@angular/router';
 
 @Component({
   selector: 'app-navbar',
-  standalone: true,   
+  standalone: true,
   templateUrl: './navbar.html',
-  styleUrls: ['./navbar.css']
+  styleUrls: ['./navbar.css'],
 })
 export class Navbar {
   activeLink: string = '';
@@ -17,9 +16,24 @@ export class Navbar {
   scrollToSection(sectionId: string) {
     const element = document.getElementById(sectionId);
     if (element) {
-      const yOffset = 10; // height of navbar + padding
-      const y = element.getBoundingClientRect().top + window.pageYOffset + yOffset;
-      window.scrollTo({ top: y, behavior: 'smooth' });
+      // Prevent any default behavior
+      event?.preventDefault();
+
+      // Use scrollIntoView with a small delay to ensure rendering is complete
+      setTimeout(() => {
+        element.scrollIntoView({
+          behavior: 'smooth',
+          block: 'start',
+        });
+
+        // After scrolling, adjust for navbar height
+        setTimeout(() => {
+          window.scrollBy({
+            top: -80,
+            behavior: 'smooth',
+          });
+        }, 100);
+      }, 0);
     }
   }
 }

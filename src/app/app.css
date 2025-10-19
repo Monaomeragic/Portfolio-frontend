@@ -1,0 +1,17 @@
+main {
+  width: 100%;
+  min-height: 100vh;
+  overflow-y: auto;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  position: relative;
+}
+
+app-home,
+app-our-story,
+app-our-team {
+  min-height: 100vh;
+  width: 100%;
+  display: block;
+  position: relative;
+}

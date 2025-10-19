@@ -1,6 +1,8 @@
 /* You can add global styles to this file, and also import other style files */
 
-body, html, app-root {
+body,
+html,
+app-root {
   margin: 0;
   padding: 0;
   height: 100%;
@@ -8,6 +10,10 @@ body, html, app-root {
   font-family: 'DM Sans', sans-serif;
   background: linear-gradient(135deg, #1f1c2c 0%, #928dab 100%);
   background-attachment: fixed;
+  box-sizing: border-box;
 }
 
-
+body,
+html {
+  overflow-x: hidden;
+}
