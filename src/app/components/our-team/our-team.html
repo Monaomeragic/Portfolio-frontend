@@ -1,9 +1,109 @@
 <section class="our-team-container" id="our-team">
-  <div class="section-wrapper"> 
-    <div class="loop-abstract-shape"></div>
-    <div class="gem-abstract-shape"></div>
-    <div class="team-content">
-      <h2 class="team-title">Meet Our Team</h2>
+  <div class="section-wrapper">
+    <h2 class="team-title">OUR TEAM</h2>
+
+    <div class="team-carousel-wrapper">
+        <div class="loop-abstract-shape"></div>
+      <button class="arrow left" (click)="scrollTeam(-1)">‹</button>
+
+      <div class="team-scroll-container" #teamScrollContainer>
+        <div class="team-page">
+          <div class="team-row">
+            <div class="team-member">
+              <img src="assets/team1.jpg" alt="Mona Omeragic" class="team-photo" />
+              <h3 class="member-name">Mona Omeragic</h3>
+              <p class="member-role">uposlenik 1</p>
+              <div class="social-icons">
+                <i class="fab fa-facebook-f"></i>
+                <i class="fab fa-twitter"></i>
+                <i class="fab fa-instagram"></i>
+              </div>
+            </div>
+            <div class="team-member">
+              <img src="assets/team2.jpg" alt="Naim Pjanic" class="team-photo" />
+              <h3 class="member-name">Naim Pjanic</h3>
+              <p class="member-role">sef</p>
+              <div class="social-icons">
+                <i class="fab fa-facebook-f"></i>
+                <i class="fab fa-twitter"></i>
+                <i class="fab fa-instagram"></i>
+              </div>
+            </div>
+          </div>
+          <div class="team-row">
+            <div class="team-member">
+              <img src="assets/team3.jpg" alt="Omar Osmanovic" class="team-photo" />
+              <h3 class="member-name">Omar Osmanovic</h3>
+              <p class="member-role">uposlenik 2</p>
+              <div class="social-icons">
+                <i class="fab fa-facebook-f"></i>
+                <i class="fab fa-twitter"></i>
+                <i class="fab fa-instagram"></i>
+              </div>
+            </div>
+            <div class="team-member">
+              <img src="assets/team4.jpg" alt="Selma Karasoftic" class="team-photo" />
+              <h3 class="member-name">Selma Karasoftic</h3>
+              <p class="member-role">uposlenik 3</p>
+              <div class="social-icons">
+                <i class="fab fa-facebook-f"></i>
+                <i class="fab fa-twitter"></i>
+                <i class="fab fa-instagram"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Page 2 -->
+        <div class="team-page">
+          <div class="team-row">
+            <div class="team-member">
+              <img src="assets/team5.jpg" alt="Aydin Sulejmanovic" class="team-photo" />
+              <h3 class="member-name">Aydin Sulejmanovic</h3>
+              <p class="member-role">uposlenik 4</p>
+              <div class="social-icons">
+                <i class="fab fa-facebook-f"></i>
+                <i class="fab fa-twitter"></i>
+                <i class="fab fa-instagram"></i>
+              </div>
+            </div>
+            <div class="team-member">
+              <img src="assets/team6.jpg" alt="Tarik Hodzic" class="team-photo" />
+              <h3 class="member-name">Tarik Hodzic</h3>
+              <p class="member-role">uposlenik 5</p>
+              <div class="social-icons">
+                <i class="fab fa-facebook-f"></i>
+                <i class="fab fa-twitter"></i>
+                <i class="fab fa-instagram"></i>
+              </div>
+            </div>
+          </div>
+          <div class="team-row">
+            <div class="team-member">
+              <img src="assets/team7.jpg" alt="Amina Brkovic" class="team-photo" />
+              <h3 class="member-name">Amina Brkovic</h3>
+              <p class="member-role">uposlenik 6</p>
+              <div class="social-icons">
+                <i class="fab fa-facebook-f"></i>
+                <i class="fab fa-twitter"></i>
+                <i class="fab fa-instagram"></i>
+              </div>
+            </div>
+            <div class="team-member">
+              <img src="assets/team8.jpg" alt="New Member" class="team-photo" />
+              <h3 class="member-name">New Member</h3>
+              <p class="member-role">uposlenik 7</p>
+              <div class="social-icons">
+                <i class="fab fa-facebook-f"></i>
+                <i class="fab fa-twitter"></i>
+                <i class="fab fa-instagram"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <button class="arrow right" (click)="scrollTeam(1)">›</button>
     </div>
   </div>
 </section>

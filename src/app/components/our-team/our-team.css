@@ -2,7 +2,7 @@
   width: 100%;
   min-height: 45vh;
   position: relative;
-  padding: 20px;
+  padding: 80px 60px 40px 60px; /* reduced top padding for less space from navbar */
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
@@ -12,37 +12,163 @@
   scroll-margin-top: 10px;
   background: transparent; 
   z-index: 1;
-  top: -100px;
 }
 
 .team-title {
   font-family: 'DM Sans', sans-serif;
-  font-weight: 500;
+  font-weight: 600;
   font-size: 45px;
   text-align: center;
-  margin-bottom: 30px;
+  margin-bottom: 10px; /* reduced margin below title for less space to boxes */
 }
-
-
-
 
 .loop-abstract-shape {
   position: absolute;
   top: 100px;
-  left: -520px;
-  width: 1140px;
-  height: 1400px;
+  left: -600px;
+  width: 1200px;
+  height: 1520px;
   background-image: url('/assets/loop.png'); 
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
-  opacity: 0.5;
+  opacity: 0.4;
   z-index: -1; 
   pointer-events: none;
-  -webkit-mask-image: linear-gradient(to right, rgba(0,1,1,1) 20%, rgba(1,0,0,0) 100%);
+  -webkit-mask-image: linear-gradient(to left, rgba(0,0,0,0) 0%, rgba(0,0,0,0.3) 40%, rgba(0,0,0,1) 100%);
   -webkit-mask-repeat: no-repeat;
   -webkit-mask-size: cover;
+  mask-image: linear-gradient(to left, rgba(0,0,0,0) 0%, rgba(0,0,0,0.3) 40%, rgba(0,0,0,1) 100%);
+  mask-repeat: no-repeat;
+  mask-size: cover;
   filter: blur(3px);
-  transform: rotate(180deg);
+  transform: rotate(170deg);
 }
 
+.team-carousel-wrapper {
+  position: relative;
+  width: 100vw;
+  overflow: visible; /* allow boxes to scale without clipping */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  padding: 0 100px; /* increased padding to prevent overlap with boxes */
+}
+
+.team-scroll-container {
+  display: flex;
+  flex-wrap: nowrap; /* prevent wrapping so pages scroll horizontally */
+  overflow-x: auto;  /* enable horizontal scrolling */
+  overflow-y: visible; /* allow hover zoom to show fully */
+  width: 100%;
+  scroll-behavior: smooth;
+  padding-bottom: 30px;
+  padding-top: 30px;
+  row-gap: 30px; /* added vertical spacing between boxes */
+}
+
+.team-page {
+  display: flex;
+  flex-direction: column;
+  width: 100%; /* full width for each page */
+  gap: 50px; /* increased vertical spacing between team member boxes */
+  flex-shrink: 0;
+  box-sizing: border-box;
+  overflow: visible; /* allow hover zoom outside page */
+}
+
+.team-row {
+  display: flex;
+  width: 100%;
+  gap: 40px; /* increased gap between boxes for better spacing */
+  justify-content: center; /* center the team members horizontally */
+}
+
+.team-member {
+  flex: 0 0 38%; /* slightly larger width for better appearance */
+  min-height: 240px; /* reduced height to fit full screen better */
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: 20px;
+  text-align: center;
+  padding: 20px 20px;
+  box-sizing: border-box;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.team-member:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+}
+
+.team-member img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%; /* circular placeholder */
+  background-color: rgba(255, 255, 255, 0.2);
+  margin-bottom: 20px;
+  object-fit: cover;
+  border: 2px solid #fff;
+}
+
+.team-member h3 {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 22px;
+  font-weight: 600;
+  color: #fff;
+  margin: 5px 0;
+}
+
+.team-member p {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 16px;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(255, 255, 255, 0.2);
+  border: none;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  color: white;
+  font-size: 26px;
+  cursor: pointer;
+  z-index: 20;
+  pointer-events: auto;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.arrow:hover {
+  background-color: rgba(255, 255, 255, 0.5);
+  transform: translateY(-50%) scale(1.1);
+}
+
+.arrow.left {
+  left: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 30;
+  pointer-events: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.arrow.right {
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 30;
+  pointer-events: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

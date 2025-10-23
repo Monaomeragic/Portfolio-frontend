@@ -13,7 +13,8 @@
   background: transparent; 
   z-index: 1;
   margin-bottom: 100px;
-
+  overflow: visible; 
+  scroll-margin-top: 70px;
 }
 
 .story-main-title,
@@ -46,7 +47,7 @@
   text-align: center;
   margin-bottom: 50px;
   white-space: pre-line; 
-  margin-top:150px;
+  margin-top:50px;
 }
 
 .story-subtitle-blocks {
@@ -215,7 +216,7 @@
 .four-step-text {
   position: relative;
   text-align: center;
-  margin: 200px 0 60px 0; 
+  margin: 200px 0 30px 0; 
   z-index: 2;
 }
 
@@ -242,17 +243,29 @@
 
 .gem-abstract-shape {
   position: absolute;
-  width: 900.69px;
-  height: 1300px; 
-  left: 50%; 
-  top: 750px; 
+  width: 60vw;       
+  height: 1200px;   
+  left: 50%;
+  top: 900px;       
   transform: translateX(-50%); 
   background: url('/assets/diamond.png') no-repeat center center;
   background-size: cover;
-  opacity: 0.9; 
-  filter: blur(4px); 
+  opacity: 1; 
+  z-index: -1; 
+  filter: blur(5px);
   mask-image: radial-gradient(ellipse at center, rgba(0,0,0,0.4) 10%, rgba(0,0,0,0) 100%);
   -webkit-mask-image: radial-gradient(ellipse at center, rgba(0,0,0,0.4) 10%, rgba(0,0,0,0) 100%);
-  z-index: 0; 
   pointer-events: none;
+}
+
+@media (max-width: 1024px) {
+  .our-story-container {
+    scroll-margin-top: 100px; /* adjust for iPad/tablet navbar height */
+  }
+}
+
+@media (max-width: 768px) {
+  .our-story-container {
+    scroll-margin-top: 120px; /* adjust for mobile navbar height */
+  }
 }
